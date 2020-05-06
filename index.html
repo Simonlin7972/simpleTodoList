@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./all.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="headerBox">
+            <div class="headerBox__icon">
+                <img src="https://i.imgur.com/3ZHMJzk.png" class="icList" alt="icon">
+            </div>
+            <div class="headerBox__title">那，你今天想要做什麼呢？</div>
+        </div>
+
+        <div class="listBox">
+            <div class="tooltip">
+                <p class=tooltip__text>請在下方輸入想做的事情才能開始哦！</p>
+                <img src="./img/ic_close.png" alt="" class="ic-close">
+            </div>
+            <div class="mainForm">
+                <input type="text" value="" placeholder="請輸入今天的待辦事項" class="textInput">
+                <input type="button" class="btnAddItem" value="新增">
+            </div>
+
+            <!-- 	分隔線 -->
+            <div class="dividerBox">
+                <div class="dividerBox__remain">還有 <b class="remain-task">0</b> 個待辦項目</div>
+
+                <div class="dividerBox__divider"></div>
+            </div>
+
+            <!-- 	清單列表 -->
+            <ui class="todoListBox">
+                <!-- <li class="todoListBox__item">
+                    <p class="todoListBox__item__text">出門買菜啦</p>
+                    <a href="" class="todoListBox__item__btnDelete">
+                        <img class="ic-Trash" src="https://i.imgur.com/UivbKYM.png" alt="trash">
+                    </a>
+                </li> -->
+
+            </ui>
+            <div class="emptyImg">
+                <img src="./img/emptyImg.png" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./all.js"></script>
+
+</body>
+
+</html>

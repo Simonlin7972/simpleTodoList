@@ -1,0 +1,228 @@
+body {
+    background-color: #F5F2EA;
+    font-family: "Noto Sans CJK TC", "Microsoft Yahei", "Helvetica";
+}
+
+a {
+    text-decoration: none;
+}
+
+input::placeholder {
+    font-weight: 400;
+}
+
+input[type=text] {
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 640px;
+    padding-top: 10vh;
+    margin: 0 auto;
+
+    @include mobile {
+        padding-top: 3vh;
+    }
+
+}
+
+.remain-task {
+    font-size: 20px;
+    color: #EA0B0B;
+}
+
+.ic-Trash {
+    width: 18px;
+    height: 18px;
+}
+
+.icList {
+    width: 40px;
+    height: 40px;
+}
+
+.headerBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    @include mobile {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+
+    &__icon {
+        margin-right: 8px;
+        width: 40px;
+        height: 40px;
+        display: block;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+
+        @include mobile {
+            font-size: 36px;
+        }
+    }
+}
+
+
+.mainForm {
+    width: 100%;
+    height: 54px;
+    display: flex;
+
+    @include mobile {
+        flex-direction: column;
+        height: auto;
+    }
+
+    // flex-direction: row;
+    .textInput {
+        margin-right: 16px;
+        font-size: 16px;
+        border: 4px solid black;
+        flex-grow: 4;
+        padding-left: 16px;
+
+        @include mobile {
+            margin-right: 0;
+            margin-bottom: 12px;
+            height: 44px;
+        }
+
+        &:focus {
+            background: #E1E1E1;
+            outline: 2px solid black;
+            outline-offset: 4px;
+        }
+    }
+
+    .btnAddItem {
+        padding-right: 24px;
+        padding-left: 24px;
+        height: 100%;
+        background: black;
+        font-weight: 700;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border: 4px solid black;
+        transition: 0.2s all;
+
+        @include mobile {
+            height: 44px;
+        }
+
+        &:hover {
+            background: #fdcb1b;
+            color: black;
+        }
+
+        &:focus {
+            // box-shadow: 0p 0 0 10px rgba(0, 0, 0, .35);
+            outline: 2px solid black;
+            outline-offset: 4px;
+            transition: none;
+        }
+    }
+}
+
+
+
+
+.listBox {
+    padding: 32px;
+    border: 8px solid black;
+    background: white;
+    min-height: 500px;
+    // box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.2);
+    margin-right: 24px;
+    margin-left: 24px;
+    position: relative;
+
+
+    @include mobile {
+        padding: 24px;
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    .tooltip {
+        position: absolute;
+        background: #FF5C01;
+        padding: 8px 12px;
+        display: flex;
+        top: -16px;
+        opacity: 0;
+        transition: .3s all;
+
+        &__text {
+            margin: 0;
+            color: white;
+            font-size: 14px;
+            margin-right: 4px;
+
+        }
+    }
+
+
+
+    .ic-close {
+        align-items: center;
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+    }
+}
+
+.dividerBox {
+    padding-top: 32px;
+    padding-bottom: 16px;
+    position: relative;
+    margin-bottom: 8px;
+
+    @include mobile {
+        padding-top: 16px;
+        margin-bottom: 24px;
+
+    }
+
+    &__remain {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 4px 8px;
+        background: white;
+        font-size: 16px;
+        line-height: 20px;
+        color: #808080;
+
+        @include mobile {
+            left: 0;
+            right: 0;
+            transform: none;
+        }
+    }
+
+
+
+    &__divider {
+        height: 4px;
+        width: 100%;
+        background-color: black;
+    }
+}

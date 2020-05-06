@@ -1,0 +1,349 @@
+@charset "UTF-8";
+body {
+  background-color: #F5F2EA;
+  font-family: "Noto Sans CJK TC", "Microsoft Yahei", "Helvetica";
+}
+
+a {
+  text-decoration: none;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 400;
+}
+
+input:-ms-input-placeholder {
+  font-weight: 400;
+}
+
+input::-ms-input-placeholder {
+  font-weight: 400;
+}
+
+input::placeholder {
+  font-weight: 400;
+}
+
+input[type=text] {
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 640px;
+  padding-top: 10vh;
+  margin: 0 auto;
+}
+
+@media (max-width: 440px) {
+  .container {
+    padding-top: 3vh;
+  }
+}
+
+.remain-task {
+  font-size: 20px;
+  color: #EA0B0B;
+}
+
+.ic-Trash {
+  width: 18px;
+  height: 18px;
+}
+
+.icList {
+  width: 40px;
+  height: 40px;
+}
+
+.headerBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 440px) {
+  .headerBox {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.headerBox__icon {
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+@media (max-width: 440px) {
+  .headerBox__icon {
+    display: none;
+  }
+}
+
+.headerBox__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 440px) {
+  .headerBox__title {
+    font-size: 36px;
+  }
+}
+
+.mainForm {
+  width: 100%;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 440px) {
+  .mainForm {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+}
+
+.mainForm .textInput {
+  margin-right: 16px;
+  font-size: 16px;
+  border: 4px solid black;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  padding-left: 16px;
+}
+
+@media (max-width: 440px) {
+  .mainForm .textInput {
+    margin-right: 0;
+    margin-bottom: 12px;
+    height: 44px;
+  }
+}
+
+.mainForm .textInput:focus {
+  background: #E1E1E1;
+  outline: 2px solid black;
+  outline-offset: 4px;
+}
+
+.mainForm .btnAddItem {
+  padding-right: 24px;
+  padding-left: 24px;
+  height: 100%;
+  background: black;
+  font-weight: 700;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: 4px solid black;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+@media (max-width: 440px) {
+  .mainForm .btnAddItem {
+    height: 44px;
+  }
+}
+
+.mainForm .btnAddItem:hover {
+  background: #fdcb1b;
+  color: black;
+}
+
+.mainForm .btnAddItem:focus {
+  outline: 2px solid black;
+  outline-offset: 4px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.listBox {
+  padding: 32px;
+  border: 8px solid black;
+  background: white;
+  min-height: 500px;
+  -webkit-box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.2);
+  margin-right: 24px;
+  margin-left: 24px;
+  position: relative;
+}
+
+@media (max-width: 440px) {
+  .listBox {
+    padding: 24px;
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+
+.listBox .tooltip {
+  position: absolute;
+  background: #FF5C01;
+  padding: 8px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -16px;
+  opacity: 0;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.listBox .tooltip__text {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.listBox .ic-close {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.dividerBox {
+  padding-top: 32px;
+  padding-bottom: 16px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 440px) {
+  .dividerBox {
+    padding-top: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+.dividerBox__remain {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 4px 8px;
+  background: white;
+  font-size: 16px;
+  line-height: 20px;
+  color: #808080;
+}
+
+@media (max-width: 440px) {
+  .dividerBox__remain {
+    left: 0;
+    right: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.dividerBox__divider {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+}
+
+.emptyImg {
+  width: 100%;
+  margin-top: 32px;
+}
+
+@media (max-width: 440px) {
+  .emptyImg {
+    margin-top: 40px;
+  }
+}
+
+.todoListBox {
+  width: 100%;
+}
+
+.todoListBox__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  -webkit-box-shadow: inset 0px -1px 0px #ECECEC;
+          box-shadow: inset 0px -1px 0px #ECECEC;
+}
+
+.todoListBox__item__text {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todoListBox__item__btnDelete {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(234, 11, 11, 0.1);
+  border: 2px solid rgba(234, 11, 11, 0.01);
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.todoListBox__item__btnDelete::before {
+  position: absolute;
+  bottom: 44px;
+  width: 52px;
+  text-align: center;
+  content: '刪除項目';
+  color: white;
+  background: #000;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 14px;
+  padding: 4px 0;
+  opacity: 0;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.todoListBox__item__btnDelete:hover {
+  border: 2px solid #EA0B0B;
+}
+
+.todoListBox__item__btnDelete:hover::before {
+  opacity: 1;
+  bottom: 48px;
+}
+/*# sourceMappingURL=all.css.map */
