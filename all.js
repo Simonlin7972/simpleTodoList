@@ -2,6 +2,7 @@
 //上傳作業到github請老師改
 // Today is XX date
 // Edit function
+// EN/TW switcher
 
 
 // 綁定 DOM
