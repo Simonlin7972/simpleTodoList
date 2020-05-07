@@ -233,7 +233,7 @@ img {
 @media (max-width: 440px) {
   .dividerBox {
     padding-top: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 }
 
@@ -253,7 +253,7 @@ img {
 @media (max-width: 440px) {
   .dividerBox__remain {
     left: 0;
-    right: 0;
+    padding-left: 0;
     -webkit-transform: none;
             transform: none;
   }
@@ -263,6 +263,12 @@ img {
   height: 4px;
   width: 100%;
   background-color: black;
+}
+
+@media (max-width: 440px) {
+  .dividerBox__divider {
+    display: none;
+  }
 }
 
 .emptyImg {
@@ -288,10 +294,14 @@ img {
   padding-bottom: 12px;
   -webkit-box-shadow: inset 0px -1px 0px #ECECEC;
           box-shadow: inset 0px -1px 0px #ECECEC;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .todoListBox__item__text {
   margin: 0;
+  margin-right: 16px;
   font-size: 28px;
   font-weight: bold;
   -webkit-box-flex: 4;
@@ -302,11 +312,19 @@ img {
           align-items: center;
 }
 
+@media (max-width: 440px) {
+  .todoListBox__item__text {
+    font-size: 20px;
+  }
+}
+
 .todoListBox__item__btnDelete {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

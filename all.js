@@ -1,11 +1,7 @@
 
 //上傳作業到github請老師改
-// RWD optimization
-// Add Local storage
-// 金萱 webfont
-// Today is
-
-
+// Today is XX date
+// Edit function
 
 
 // 綁定 DOM
@@ -22,7 +18,19 @@ var tooltip = document.querySelector('.tooltip');
 var btnClose = document.querySelector('.ic-close');
 
 
-var data = [];
+// 把目前的 data 轉回陣列存回 localStorage 
+var data = JSON.parse(localStorage.getItem('listData')) || [];
+
+
+// 一開始先檢查 localstorage 裡面是否有data, 有的話就隱藏插圖，然後執行 update List
+if (data == '') {
+    document.querySelector('.emptyImg').style.display = "block";
+} else {
+    document.querySelector('.emptyImg').style.display = "none";
+    updateList(data);
+}
+
+
 
 //監聽事件
 btnAdd.addEventListener('click', addData, false);
@@ -30,6 +38,7 @@ textInput.addEventListener('keydown', enterData, false);
 todoList.addEventListener('click', deleteData, true);
 
 btnClose.addEventListener('click', closeTooltip, false);
+
 
 //關掉tooltip 
 function closeTooltip() {
@@ -52,6 +61,7 @@ function addData() {
     if (value != []) {
         data.push(value);
         updateList(data);
+        localStorage.setItem('listData', JSON.stringify(data));
         tooltip.style.opacity = "0";
     } else {
         tooltip.style.opacity = "1";
@@ -97,7 +107,9 @@ function deleteData(e) {
             data.splice(num, 1);
             break;
     };
+    localStorage.setItem('listData', JSON.stringify(data));
     updateList(data);
+
     //如果list裡面沒有data 就顯示預設插圖
     if (data == '') {
         document.querySelector('.emptyImg').style.display = "block";

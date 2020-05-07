@@ -15,19 +15,26 @@
         padding-top: 12px;
         padding-bottom: 12px;
         box-shadow: inset 0px -1px 0px #ECECEC;
+        align-items: center;
 
         &__text {
             margin: 0;
+            margin-right: 16px;
             font-size: 28px;
             font-weight: bold;
             flex-grow: 4;
             align-items: center;
+
+            @include mobile {
+                font-size: 20px;
+            }
         }
 
         &__btnDelete {
             // display: block;
             position: relative;
             display: flex;
+            flex-shrink: 0;
             align-items: center;
             justify-content: center;
             width: 40px;

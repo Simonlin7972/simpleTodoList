@@ -196,7 +196,7 @@ img {
 
     @include mobile {
         padding-top: 16px;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
 
     }
 
@@ -213,7 +213,8 @@ img {
 
         @include mobile {
             left: 0;
-            right: 0;
+            padding-left: 0;
+            // right: 0;
             transform: none;
         }
     }
@@ -224,5 +225,9 @@ img {
         height: 4px;
         width: 100%;
         background-color: black;
+
+        @include mobile {
+            display: none;
+        }
     }
 }
