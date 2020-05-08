@@ -17,7 +17,7 @@ body {
 
 a {
     text-decoration: none;
-    // font-family: "jf-jinxuan";
+    font-family: "jf-jinxuan";
 }
 
 input::placeholder {
@@ -25,7 +25,7 @@ input::placeholder {
 }
 
 input[type=text] {
-    // font-family: "jf-jinxuan";
+    font-family: "jf-jinxuan";
     font-weight: bold;
 }
 
@@ -264,7 +264,6 @@ img {
 
 .todoListBox {
     width: 100%;
-    font-family: "jf-jinxuan";
 
     &__item {
         display: flex;
@@ -274,6 +273,7 @@ img {
         align-items: center;
 
         &__text {
+            font-family: "jf-jinxuan";
             margin: 0;
             margin-right: 16px;
             font-size: 28px;
