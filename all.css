@@ -65,6 +65,11 @@ img {
   color: #EA0B0B;
 }
 
+.ic-check {
+  width: 24px;
+  height: 24px;
+}
+
 .ic-Trash {
   width: 18px;
   height: 18px;
@@ -351,10 +356,59 @@ img {
   -webkit-box-flex: 4;
       -ms-flex-positive: 4;
           flex-grow: 4;
+  border: none;
 }
 
 .todoListBox__item__edit:focus {
   outline: none;
+}
+
+.todoListBox__item__btnCheck {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(46, 209, 114, 0.1);
+  border: 2px solid rgba(234, 11, 11, 0.01);
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.todoListBox__item__btnCheck:hover {
+  border: 2px solid #2ED172;
+}
+
+.todoListBox__item__btnCheck:hover::before {
+  opacity: 1;
+  bottom: 48px;
+}
+
+.todoListBox__item__btnCheck::before {
+  position: absolute;
+  width: 52px;
+  bottom: 44px;
+  text-align: center;
+  content: '編輯完成';
+  color: white;
+  background: #000;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "jf-jinxuan-bold";
+  line-height: 14px;
+  padding: 4px 0;
+  opacity: 0;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
 .todoListBox__item__btnEdit {
