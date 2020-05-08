@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   background-color: #F5F2EA;
-  font-family: "Noto Sans CJK TC", "Microsoft Yahei", "Helvetica";
+  font-family: "jf-jinxuan";
 }
 
 a {
@@ -9,22 +9,23 @@ a {
 }
 
 input::-webkit-input-placeholder {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 input:-ms-input-placeholder {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 input::-ms-input-placeholder {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 input::placeholder {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 input[type=text] {
+  font-family: "jf-jinxuan";
   font-weight: bold;
 }
 
@@ -92,11 +93,13 @@ img {
 .headerBox__title {
   font-size: 24px;
   font-weight: bold;
+  line-height: 40px;
 }
 
 @media (max-width: 440px) {
   .headerBox__title {
     font-size: 36px;
+    line-height: 50px;
   }
 }
 
@@ -143,6 +146,7 @@ img {
 }
 
 .mainForm .btnAddItem {
+  font-family: "jf-jinxuan";
   padding-right: 24px;
   padding-left: 24px;
   height: 100%;
@@ -212,6 +216,7 @@ img {
   color: white;
   font-size: 14px;
   margin-right: 4px;
+  line-height: 24px;
 }
 
 .listBox .ic-close {

@@ -1,6 +1,6 @@
 body {
     background-color: #F5F2EA;
-    font-family: "Noto Sans CJK TC", "Microsoft Yahei", "Helvetica";
+    font-family: "jf-jinxuan";
 }
 
 a {
@@ -12,6 +12,7 @@ input::placeholder {
 }
 
 input[type=text] {
+    font-family: "jf-jinxuan";
     font-weight: bold;
 }
 
@@ -70,9 +71,11 @@ img {
     &__title {
         font-size: 24px;
         font-weight: bold;
+        line-height: 40px;
 
         @include mobile {
             font-size: 36px;
+            line-height: 50px;
         }
     }
 }
@@ -110,6 +113,7 @@ img {
     }
 
     .btnAddItem {
+        font-family: "jf-jinxuan";
         padding-right: 24px;
         padding-left: 24px;
         height: 100%;
@@ -174,6 +178,7 @@ img {
             color: white;
             font-size: 14px;
             margin-right: 4px;
+            line-height: 24px;
 
         }
     }

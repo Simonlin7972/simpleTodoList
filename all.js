@@ -3,7 +3,9 @@
 // Today is XX date
 // Edit function
 // EN/TW switcher
-//test
+// drag and drop
+// custom input cursor
+// CTA is broken on iphone
 
 
 // 綁定 DOM
