@@ -36,6 +36,10 @@ input[type=text] {
   font-weight: bold;
 }
 
+input [type=button] {
+  -webkit-appearance: none;
+}
+
 img {
   width: 100%;
 }
@@ -153,6 +157,7 @@ img {
 }
 
 .mainForm .btnAddItem {
+  -webkit-appearance: none;
   padding-right: 24px;
   padding-left: 24px;
   height: 100%;
