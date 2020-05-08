@@ -345,6 +345,18 @@ img {
   }
 }
 
+.todoListBox__item__edit {
+  font-size: 28px;
+  caret-color: #2F80ED;
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+}
+
+.todoListBox__item__edit:focus {
+  outline: none;
+}
+
 .todoListBox__item__btnEdit {
   position: relative;
   display: -webkit-box;

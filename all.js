@@ -98,25 +98,26 @@ function updateList(items) {
     textInput.value = [];
 }
 
-function deleteData(e) {
-    e.preventDefault();
-    //抓取點擊元素的 className
-    var clickDom = e.target.className;
-    var num = e.target.parentNode.dataset.index;
-    //根據點擊元素的 className 來刪掉相應的 data index
-    switch (clickDom) {
-        case 'ic-Trash':
-            data.splice(num, 1);
-            break;
-        case 'todoListBox__item__btnDelete':
-            data.splice(num, 1);
-            break;
-    };
-    localStorage.setItem('listData', JSON.stringify(data));
-    updateList(data);
+// //刪除todo項目
+// function deleteData(e) {
+//     e.preventDefault();
+//     //抓取點擊元素的 className
+//     var clickDom = e.target.className;
+//     var num = e.target.parentNode.dataset.index;
+//     //根據點擊元素的 className 來刪掉相應的 data index
+//     switch (clickDom) {
+//         case 'ic-Trash':
+//             data.splice(num, 1);
+//             break;
+//         case 'todoListBox__item__btnDelete':
+//             data.splice(num, 1);
+//             break;
+//     };
+//     localStorage.setItem('listData', JSON.stringify(data));
+//     updateList(data);
 
-    //如果list裡面沒有data 就顯示預設插圖
-    if (data == '') {
-        document.querySelector('.emptyImg').style.display = "block";
-    }
-}
+//     //如果list裡面沒有data 就顯示預設插圖
+//     if (data == '') {
+//         document.querySelector('.emptyImg').style.display = "block";
+//     }
+// }

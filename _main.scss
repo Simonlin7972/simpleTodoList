@@ -269,8 +269,12 @@ img {
     }
 }
 
+
+//待辦清單內容
 .todoListBox {
     width: 100%;
+    // display: flex;
+    // justify-content: space-between;
 
     &__item {
         display: flex;
@@ -280,17 +284,29 @@ img {
         align-items: center;
 
         &__text {
+            // display: none;
             margin: 0;
             margin-right: 16px;
             font-size: 28px;
             font-family: "jf-jinxuan-medium";
-            ;
             font-weight: bold;
             flex-grow: 4;
             align-items: center;
 
             @include mobile {
                 font-size: 20px;
+            }
+        }
+
+        //編輯文字
+        &__edit {
+            // display: none;
+            font-size: 28px;
+            caret-color: #2F80ED;
+            flex-grow: 4;
+
+            &:focus {
+                outline: none;
             }
         }
 
@@ -306,6 +322,7 @@ img {
             background: #ECECEC;
             border: 2px solid rgba(234, 11, 11, 0.01);
             transition: .3s all;
+            // display: none;
 
             &:hover {
                 border: 2px solid #AFAFAF;
@@ -350,6 +367,7 @@ img {
             background: rgba(234, 11, 11, 0.1);
             border: 2px solid rgba(234, 11, 11, 0.01);
             transition: .3s all;
+            // display: none;
 
             // tooltip when hover delete button
             &::before {
