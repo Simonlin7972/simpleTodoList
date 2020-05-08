@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+.mr8 {
+  margin-right: 8px;
+}
+
 @font-face {
   font-family: "jf-jinxuan";
 }
@@ -76,8 +81,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 24px;
 }
 
@@ -126,8 +131,8 @@ img {
   .mainForm {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     height: auto;
   }
 }
@@ -137,8 +142,8 @@ img {
   font-size: 16px;
   border: 4px solid black;
   -webkit-box-flex: 4;
-      -ms-flex-positive: 4;
-          flex-grow: 4;
+  -ms-flex-positive: 4;
+  flex-grow: 4;
   padding-left: 16px;
 }
 
@@ -195,7 +200,7 @@ img {
   background: white;
   min-height: 500px;
   -webkit-box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.2);
   margin-right: 24px;
   margin-left: 24px;
   position: relative;
@@ -233,8 +238,8 @@ img {
 
 .listBox .ic-close {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 24px;
   width: 24px;
   cursor: pointer;
@@ -258,7 +263,7 @@ img {
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   padding: 4px 8px;
   background: white;
@@ -272,7 +277,7 @@ img {
     left: 0;
     padding-left: 0;
     -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
 }
 
@@ -310,10 +315,10 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   -webkit-box-shadow: inset 0px -1px 0px #ECECEC;
-          box-shadow: inset 0px -1px 0px #ECECEC;
+  box-shadow: inset 0px -1px 0px #ECECEC;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .todoListBox__item__text {
@@ -323,11 +328,11 @@ img {
   font-family: "jf-jinxuan-medium";
   font-weight: bold;
   -webkit-box-flex: 4;
-      -ms-flex-positive: 4;
-          flex-grow: 4;
+  -ms-flex-positive: 4;
+  flex-grow: 4;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (max-width: 440px) {
@@ -336,19 +341,40 @@ img {
   }
 }
 
+.todoListBox__item__btnEdit {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #ECECEC;
+  border: 2px solid rgba(234, 11, 11, 0.01);
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
 .todoListBox__item__btnDelete {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   background: rgba(234, 11, 11, 0.1);
@@ -383,4 +409,5 @@ img {
   opacity: 1;
   bottom: 48px;
 }
+
 /*# sourceMappingURL=all.css.map */
