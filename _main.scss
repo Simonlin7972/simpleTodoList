@@ -8,24 +8,24 @@
 
 * {
     // font-family: "jf-jinxuan", "Noto Sans TC", "微軟正黑體", "Microsoft Yahei";
-    font-family: "jf-jinxuan";
+    font-family: "jf-jinxuan-bold";
 }
 
 body {
     background-color: #F5F2EA;
-    font-family: "jf-jinxuan";
 }
 
 a {
     text-decoration: none;
+    font-family: "jf-jinxuan-medium";
 }
 
 input::placeholder {
-    font-weight: 700;
+    // font-weight: 700;
 }
 
 input[type=text] {
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 img {
@@ -82,7 +82,7 @@ img {
 
     &__title {
         font-size: 24px;
-        font-weight: bold;
+        // font-weight: bold;
         line-height: 40px;
 
         @include mobile {
@@ -129,7 +129,7 @@ img {
         padding-left: 24px;
         height: 100%;
         background: black;
-        font-weight: 700;
+        // font-weight: 700;
         color: white;
         font-size: 16px;
         cursor: pointer;
@@ -185,6 +185,7 @@ img {
         transition: .3s all;
 
         &__text {
+            font-family: "jf-jinxuan-medium";
             margin: 0;
             color: white;
             font-size: 14px;
@@ -272,7 +273,9 @@ img {
             margin: 0;
             margin-right: 16px;
             font-size: 28px;
-            font-weight: bold;
+            font-family: "jf-jinxuan-medium";
+            ;
+            // font-weight: bold;
             flex-grow: 4;
             align-items: center;
 
@@ -304,7 +307,8 @@ img {
                 color: white;
                 background: #000;
                 font-size: 10px;
-                font-weight: bold;
+                // font-weight: bold;
+                font-family: "jf-jinxuan-bold";
                 line-height: 14px;
                 padding: 4px 0;
                 opacity: 0;
