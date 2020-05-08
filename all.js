@@ -4,7 +4,6 @@
 // Edit function
 // EN/TW switcher
 // drag and drop
-// custom input cursor
 // CTA is broken on iphone
 
 
@@ -12,7 +11,11 @@
 var textInput = document.querySelector('.textInput');
 var btnAdd = document.querySelector('.btnAddItem');
 var todoList = document.querySelector('.todoListBox');
-var btnDelete = document.querySelector('.btnDelete');
+
+// ActionBtns
+var btnEdit = document.querySelector('.todoListBox__item__btnEdit');
+var btnDelete = document.querySelector('.todoListBox__item__btnDelete');
+
 
 //剩下 # 待辦事項
 var remain = document.querySelector('.dividerBox__remain');
@@ -26,7 +29,7 @@ var btnClose = document.querySelector('.ic-close');
 var data = JSON.parse(localStorage.getItem('listData')) || [];
 
 
-// 一開始先檢查 localstorage 裡面是否有data, 有的話就隱藏插圖，然後執行 update List
+// 一開始先檢查 local storage 裡面是否有data, 有的話就隱藏插圖，然後執行 update List
 if (data == '') {
     document.querySelector('.emptyImg').style.display = "block";
 } else {
@@ -39,9 +42,10 @@ if (data == '') {
 //監聽事件
 btnAdd.addEventListener('click', addData, false);
 textInput.addEventListener('keydown', enterData, false);
+// btnDelete.addEventListener('click', deleteData, true);
 todoList.addEventListener('click', deleteData, true);
-
 btnClose.addEventListener('click', closeTooltip, false);
+btnEdit.addEventListener('click', editTodo, false);
 
 
 //關掉tooltip 
@@ -52,7 +56,7 @@ function closeTooltip() {
 //按鍵盤enter新增項目
 function enterData(e) {
     var keyEnter = e.keyCode;
-    // 如果按enter的話執行 addData funciton
+    // 如果按enter的話執行 addData function
     if (keyEnter == 13) {
         addData();
     }
@@ -77,14 +81,16 @@ function addData() {
     }
 }
 
+
 function updateList(items) {
     var todoCombine = '';
     var dataTotal = items.length;
     for (i = 0; i < dataTotal; i++) {
         var todoItemContent = data[i];
         //在 li 和 a 都各加上了 data-index=* 確保不管點擊 trash icon 或是外匡都能正確得到 index的 值
-        var todoItem = '<li class="todoListBox__item" data-index=' + i + '><p class="todoListBox__item__text">' + todoItemContent + '</p><a href="#" class="todoListBox__item__btnDelete" data-index=' + i + '><img class="ic-Trash" src="https://i.imgur.com/UivbKYM.png" alt="trash"></a></li>'
+        var todoItem = '<li class="todoListBox__item" data-index=' + i + '><p class="todoListBox__item__text">' + todoItemContent + '</p><input type="text" class="todoListBox__item__edit" value="出門買菜"><a href="" class="todoListBox__item__btnCheck"><img class="ic-check" src="./img/ic_check.png" alt="check"></a><a href="" class="todoListBox__item__btnEdit mr8"><img class="ic-edit" src="./img/ic_edit.png" alt="edit"></a><a href="#" class="todoListBox__item__btnDelete" data-index=' + i + '><img class="ic-Trash" src="https://i.imgur.com/UivbKYM.png" alt="trash"></a></li>'
         todoCombine += todoItem;
+
     }
     todoList.innerHTML = todoCombine;
 
@@ -98,26 +104,33 @@ function updateList(items) {
     textInput.value = [];
 }
 
-// //刪除todo項目
-// function deleteData(e) {
-//     e.preventDefault();
-//     //抓取點擊元素的 className
-//     var clickDom = e.target.className;
-//     var num = e.target.parentNode.dataset.index;
-//     //根據點擊元素的 className 來刪掉相應的 data index
-//     switch (clickDom) {
-//         case 'ic-Trash':
-//             data.splice(num, 1);
-//             break;
-//         case 'todoListBox__item__btnDelete':
-//             data.splice(num, 1);
-//             break;
-//     };
-//     localStorage.setItem('listData', JSON.stringify(data));
-//     updateList(data);
 
-//     //如果list裡面沒有data 就顯示預設插圖
-//     if (data == '') {
-//         document.querySelector('.emptyImg').style.display = "block";
-//     }
-// }
+//編輯todo
+function editTodo() {
+    console.log('123');
+}
+
+
+// 刪除todo項目
+function deleteData(e) {
+    e.preventDefault();
+    //抓取點擊元素的 className
+    var clickDom = e.target.className;
+    var num = e.target.parentNode.dataset.index;
+    //根據點擊元素的 className 來刪掉相應的 data index
+    switch (clickDom) {
+        case 'ic-Trash':
+            data.splice(num, 1);
+            break;
+        case 'todoListBox__item__btnDelete':
+            data.splice(num, 1);
+            break;
+    };
+    localStorage.setItem('listData', JSON.stringify(data));
+    updateList(data);
+
+    //如果list裡面沒有data 就顯示預設插圖
+    if (data == '') {
+        document.querySelector('.emptyImg').style.display = "block";
+    }
+}

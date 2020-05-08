@@ -351,6 +351,7 @@ img {
 }
 
 .todoListBox__item__edit {
+  display: none;
   font-size: 28px;
   caret-color: #2F80ED;
   -webkit-box-flex: 4;
@@ -382,6 +383,7 @@ img {
   border: 2px solid rgba(234, 11, 11, 0.01);
   -webkit-transition: .3s all;
   transition: .3s all;
+  display: none;
 }
 
 .todoListBox__item__btnCheck:hover {
@@ -430,6 +432,7 @@ img {
   border: 2px solid rgba(234, 11, 11, 0.01);
   -webkit-transition: .3s all;
   transition: .3s all;
+  z-index: 90;
 }
 
 .todoListBox__item__btnEdit:hover {

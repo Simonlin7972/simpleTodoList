@@ -303,9 +303,9 @@ img {
             }
         }
 
-        //編輯文字
+        //編輯文字欄位，預設不顯示
         &__edit {
-            // display: none;
+            display: none;
             font-size: 28px;
             caret-color: #2F80ED;
             flex-grow: 4;
@@ -316,7 +316,7 @@ img {
             }
         }
 
-        //編輯完成按鈕
+        //編輯完成按鈕，預設不顯示
         &__btnCheck {
             position: relative;
             display: flex;
@@ -328,8 +328,8 @@ img {
             background: rgba(46, 209, 114, 0.1);
             border: 2px solid rgba(234, 11, 11, 0.01);
             transition: .3s all;
+            display: none;
 
-            // display: none;
             &:hover {
                 border: 2px solid #2ED172;
 
@@ -373,6 +373,7 @@ img {
             background: #ECECEC;
             border: 2px solid rgba(234, 11, 11, 0.01);
             transition: .3s all;
+            z-index: 90;
             // display: none;
 
             &:hover {
