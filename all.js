@@ -100,14 +100,15 @@ function updateList(items) {
 
 function deleteData(e) {
     e.preventDefault();
-    var clickDom = e.target.nodeName;
+    //抓取點擊元素的 className
+    var clickDom = e.target.className;
     var num = e.target.parentNode.dataset.index;
-    console.log(num);
+    //根據點擊元素的 className 來刪掉相應的 data index
     switch (clickDom) {
-        case 'A':
+        case 'ic-Trash':
             data.splice(num, 1);
             break;
-        case 'IMG':
+        case 'todoListBox__item__btnDelete':
             data.splice(num, 1);
             break;
     };

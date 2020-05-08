@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  font-family: "jf-jinxuan";
+}
+
 body {
   background-color: #F5F2EA;
   font-family: "jf-jinxuan";
@@ -6,6 +10,7 @@ body {
 
 a {
   text-decoration: none;
+  font-family: "jf-jinxuan";
 }
 
 input::-webkit-input-placeholder {
@@ -243,6 +248,7 @@ img {
 }
 
 .dividerBox__remain {
+  font-family: "jf-jinxuan";
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -289,6 +295,7 @@ img {
 
 .todoListBox {
   width: 100%;
+  font-family: "jf-jinxuan";
 }
 
 .todoListBox__item {
