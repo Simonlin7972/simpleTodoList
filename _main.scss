@@ -1,6 +1,7 @@
 @font-face {
     font-family: "jf-jinxuan";
-    src: url('./fonts/jf-jinxuan-bold.woff') format("woff");
+    src: url('./fonts/jf-jinxuan-bold.woff') format("woff"),
+        url('./fonts/jf-jinxuan-medium.woff') format("woff");
     // url('./fonts/Helvetica.ttf') format("truetype"),
     // url('./fonts/Helvetica.eot') format("embedded-opentype");
 }
@@ -17,7 +18,6 @@ body {
 
 a {
     text-decoration: none;
-    font-family: "jf-jinxuan";
 }
 
 input::placeholder {
@@ -25,7 +25,6 @@ input::placeholder {
 }
 
 input[type=text] {
-    font-family: "jf-jinxuan";
     font-weight: bold;
 }
 
@@ -126,7 +125,6 @@ img {
     }
 
     .btnAddItem {
-        font-family: "jf-jinxuan";
         padding-right: 24px;
         padding-left: 24px;
         height: 100%;
@@ -197,7 +195,6 @@ img {
     }
 
 
-
     .ic-close {
         align-items: center;
         height: 24px;
@@ -219,7 +216,6 @@ img {
     }
 
     &__remain {
-        font-family: "jf-jinxuan";
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -273,7 +269,6 @@ img {
         align-items: center;
 
         &__text {
-            font-family: "jf-jinxuan";
             margin: 0;
             margin-right: 16px;
             font-size: 28px;

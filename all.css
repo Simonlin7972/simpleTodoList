@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "jf-jinxuan";
-  src: url("./fonts/jf-jinxuan-bold.woff") format("woff");
+  src: url("./fonts/jf-jinxuan-bold.woff") format("woff"), url("./fonts/jf-jinxuan-medium.woff") format("woff");
 }
 
 * {
@@ -15,7 +15,6 @@ body {
 
 a {
   text-decoration: none;
-  font-family: "jf-jinxuan";
 }
 
 input::-webkit-input-placeholder {
@@ -35,7 +34,6 @@ input::placeholder {
 }
 
 input[type=text] {
-  font-family: "jf-jinxuan";
   font-weight: bold;
 }
 
@@ -156,7 +154,6 @@ img {
 }
 
 .mainForm .btnAddItem {
-  font-family: "jf-jinxuan";
   padding-right: 24px;
   padding-left: 24px;
   height: 100%;
@@ -253,7 +250,6 @@ img {
 }
 
 .dividerBox__remain {
-  font-family: "jf-jinxuan";
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -316,7 +312,6 @@ img {
 }
 
 .todoListBox__item__text {
-  font-family: "jf-jinxuan";
   margin: 0;
   margin-right: 16px;
   font-size: 28px;
