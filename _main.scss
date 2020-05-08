@@ -1,9 +1,12 @@
 @font-face {
     font-family: "jf-jinxuan";
+    src: url('./fonts/jf-jinxuan-bold.woff') format("woff");
+    // url('./fonts/Helvetica.ttf') format("truetype"),
+    // url('./fonts/Helvetica.eot') format("embedded-opentype");
 }
 
 * {
-    font-family: "Helvetica", "jf-jinxuan", "Noto Sans TC", "微軟正黑體", "Microsoft Yahei";
+    font-family: "jf-jinxuan", "Helvetica", "Noto Sans TC", "微軟正黑體", "Microsoft Yahei";
 }
 
 body {
