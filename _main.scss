@@ -28,6 +28,10 @@ input[type=text] {
     font-weight: bold;
 }
 
+input [type=button] {
+    -webkit-appearance: none;
+}
+
 img {
     width: 100%;
 }

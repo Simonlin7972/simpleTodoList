@@ -83,7 +83,7 @@ function updateList(items) {
     for (i = 0; i < dataTotal; i++) {
         var todoItemContent = data[i];
         //在 li 和 a 都各加上了 data-index=* 確保不管點擊 trash icon 或是外匡都能正確得到 index的 值
-        var todoItem = '<li class="todoListBox__item" data-index=' + i + '><p class="todoListBox__item__text">' + todoItemContent + '</p><a href="#" class="todoListBox__item__btnDelete" data-index=' + i + '><img class="ic-Trash" src="https://i.imgur.com/UivbKYM.png" alt="trash"><a/></li>'
+        var todoItem = '<li class="todoListBox__item" data-index=' + i + '><p class="todoListBox__item__text">' + todoItemContent + '</p><a href="#" class="todoListBox__item__btnDelete" data-index=' + i + '><img class="ic-Trash" src="https://i.imgur.com/UivbKYM.png" alt="trash"></a></li>'
         todoCombine += todoItem;
     }
     todoList.innerHTML = todoCombine;
