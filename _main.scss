@@ -57,6 +57,11 @@ img {
     height: 18px;
 }
 
+.ic-edit {
+    width: 18px;
+    height: 18px;
+}
+
 .icList {
     width: 40px;
     height: 40px;
@@ -289,6 +294,7 @@ img {
             }
         }
 
+        //編輯按鈕
         &__btnEdit {
             position: relative;
             display: flex;
@@ -297,12 +303,41 @@ img {
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: ECECEC;
+            background: #ECECEC;
             border: 2px solid rgba(234, 11, 11, 0.01);
             transition: .3s all;
 
+            &:hover {
+                border: 2px solid #AFAFAF;
+
+                &::before {
+                    opacity: 1;
+                    bottom: 48px;
+
+                }
+
+            }
+
+            // tooltip when hover delete button
+            &::before {
+                position: absolute;
+                bottom: 44px;
+                text-align: center;
+                content: '編輯';
+                color: white;
+                background: #000;
+                font-size: 10px;
+                font-weight: bold;
+                font-family: "jf-jinxuan-bold";
+                line-height: 14px;
+                padding: 4px 6px;
+                opacity: 0;
+                transition: .3s all;
+
+            }
         }
 
+        //刪除按鈕
         &__btnDelete {
             // display: block;
             position: relative;
