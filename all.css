@@ -14,7 +14,6 @@ body {
 
 a {
   text-decoration: none;
-  font-family: "jf-jinxuan";
 }
 
 input::-webkit-input-placeholder {
@@ -34,7 +33,6 @@ input::placeholder {
 }
 
 input[type=text] {
-  font-family: "jf-jinxuan";
   font-weight: bold;
 }
 
